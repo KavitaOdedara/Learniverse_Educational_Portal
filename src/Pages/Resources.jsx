@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { FaEye } from 'react-icons/fa';  // You can use an eye icon for "Preview"
 import coursesData from '../data/coursesPdfMaterials.json';
 
- // Import images directly and map them using an object
+// Import images directly and map them using an object
 import HTMLImg from '../assets/Images/HTML.png';
 import CSSImg from '../assets/Images/CSS.png';
 import JSImg from '../assets/Images/Javascript.png';
@@ -21,16 +20,16 @@ import FlutterImg from '../assets/Images/Flutter.png';
 
 import CloudFundaImg from '../assets/Images/CloudFunda.png';
 import AWSImg from '../assets/Images/AWS.png';
-import DokerImg from '../assets/Images/Doker&Kubernetes.png'
+import DokerImg from '../assets/Images/Doker&Kubernetes.png';
 import CloudSecImg from '../assets/Images/CloudSec.png';
 
- // Create a map for course images to avoid repetition
+// Create a map for course images to avoid repetition
 const imageMap = {
   'HTML.png': HTMLImg,
   'CSS.png': CSSImg,
   'Javascript.png': JSImg,
   'React.png': ReactImg,
-  'Node.png' : NodeImg,
+  'Node.png': NodeImg,
   'Python.png': PythonImg,
   'MySQL.png': MySQLImg,
   'MongoDB.png': MongoDBImg,
@@ -44,7 +43,6 @@ const imageMap = {
   'CloudSec.png': CloudSecImg
 };
 
-
 const Resources = () => {
   // Function to handle PDF preview (Google Drive link)
   const handlePreview = (pdfPath) => {
@@ -55,7 +53,7 @@ const Resources = () => {
     <div className="flex justify-center flex-col mx-7 sm:mx-24">
       {coursesData.courses.map((coursesCategory) => (
         <div key={coursesCategory.courseHead}>
-          <div className="text-center text-xl sm:text:3xl capitalize py-6 font-medium tracking-wider dark:text-white">
+          <div className="text-center text-xl sm:text:3xl capitalize py-6 font-medium tracking-wider">
             <span className="border-b-2 border-cyan-600">{coursesCategory.courseHead}</span>
           </div>
 
@@ -65,7 +63,7 @@ const Resources = () => {
             return (
               <div
                 key={course.coursesName}
-                className="flex items-center w-full max-w-xlg p-4 mb-4 border-b-4 border-l-4 border-cyan-600 shadow-2xl text-gray-500 bg-cyan-50 rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+                className="flex items-center w-full max-w-xlg p-4 mb-4 border-b-4 border-l-4 border-cyan-600 shadow-2xl text-gray-500 bg-cyan-50 rounded-lg"
                 role="alert"
               >
                 <div className="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-green-500 rounded-lg">
@@ -92,7 +90,3 @@ const Resources = () => {
 };
 
 export default Resources;
-
-
-
-
