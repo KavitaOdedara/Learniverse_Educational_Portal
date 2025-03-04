@@ -1,0 +1,261 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "HTML Basics",
+      "description": "Learn the foundation of web structure using HTML.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to HTML",
+          "content": [
+            "HTML (HyperText Markup Language) forms the foundation of all web pages. It is a standard system for creating and structuring web content. HTML allows you to define elements such as headings, paragraphs, images, and links on your webpage.",
+            "The basic structure of an HTML document includes the declaration <!DOCTYPE html> at the beginning, followed by the <html> tag, which wraps the entire document. Inside the <html> tag, the <head> section contains meta-information like the title and links to external CSS files. The <body> section contains the visible content of the webpage, such as text, images, and videos.",
+            "Learning the semantic structure of HTML is essential for organizing content effectively. Tags like <header>, <footer>, <section>, and <article> help with this organization, improving accessibility and making it easier for search engines to index your content."
+          ],
+          "example": {
+            "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>HTML Basics</title>\n  </head>\n  <body>\n    <h1>Welcome to HTML Basics</h1>\n  </body>\n</html>"
+          }
+        },
+        {
+          "id": 2,
+          "title": "HTML Tags and Attributes",
+          "content": [
+            "HTML tags are used to define elements on a webpage. Each tag serves a specific purpose, such as <h1> to <h6> for headings, <p> for paragraphs, <a> for hyperlinks, and <img> for images. HTML tags are the building blocks of web pages, and knowing when and how to use them is crucial for effective web design.",
+            "In addition to tags, HTML elements can have attributes. Attributes provide additional information about an element, such as its behavior or its properties. For example, the <a> tag can have an 'href' attribute to specify a link's destination, and the <img> tag can have 'src' and 'alt' attributes to define an image's source and provide alternative text for accessibility."
+          ],
+          "example": {
+            "code": "<a href=\"https://example.com\">Visit Example</a>"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Lists and Tables",
+          "content": [
+            "HTML lists and tables allow for organized content presentation. Ordered lists (<ol>) and unordered lists (<ul>) are used to display items with or without a specific order, respectively. Within these tags, <li> is used to define list items.",
+            "Tables are essential for displaying data in rows and columns. The <table> tag is used to define the table, <tr> defines table rows, <th> defines table headers, and <td> defines table data cells. By learning how to use these elements, you can organize and present data clearly, ensuring it’s easy for users to understand."
+          ],
+          "example": {
+            "code": "<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>30</td>\n  </tr>\n</table>"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Forms and Inputs",
+          "content": [
+            "Forms are essential for collecting user data, such as text input, selection choices, and file uploads. HTML forms are created using the <form> tag, and various input types such as <input>, <textarea>, <select>, and <button> allow users to interact with the form.",
+            "Attributes like ‘type’, ‘placeholder’, ‘required’, and ‘value’ define the behavior of inputs. For example, <input type=\"text\"> creates a text field, while <textarea> allows multiline text input. Form validation ensures the user provides necessary data before submission."
+          ],
+          "example": {
+            "code": "<form>\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\" required>\n  <button type=\"submit\">Submit</button>\n</form>"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Advanced Media Integration",
+          "content": [
+            "Modern websites often include multimedia elements such as images, videos, and audio. HTML provides specific tags for embedding and controlling media. The <img> tag displays images, and the <video> tag allows for embedding video content with controls like play, pause, and volume.",
+            "Similarly, the <audio> tag is used for embedding sound clips. To create responsive images that adapt to different screen sizes, the <picture> element is used to display images based on conditions like screen width. These multimedia elements enhance the user experience, making your website more interactive and engaging."
+          ],
+          "example": {
+            "code": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "CSS Basics",
+      "description": "Learn how to style and visually enhance your web pages.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to CSS",
+          "content": [
+            "CSS (Cascading Style Sheets) is used to control the presentation of HTML elements. With CSS, you can define styles such as colors, fonts, margins, padding, and layout properties that make web pages visually appealing.",
+            "There are three ways to apply CSS: inline styles, internal styles, and external styles. Inline styles are applied directly within HTML tags using the 'style' attribute, internal styles are placed inside <style> tags in the document’s <head> section, and external styles are linked to the HTML document through an external CSS file using the <link> tag.",
+            "External stylesheets are preferred for larger websites because they separate the structure (HTML) from the style (CSS), making the code more maintainable."
+          ],
+          "example": {
+            "code": "h1 { color: blue; font-size: 24px; }"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Selectors and Combinators",
+          "content": [
+            "CSS selectors are used to target specific elements on a webpage in order to apply styles to them. A basic selector can target an element by its tag name, class, or ID. For example, 'p' selects all paragraph elements, '.class' selects elements with a specific class, and '#id' selects elements with a specific ID.",
+            "More advanced CSS selectors include pseudo-classes and pseudo-elements. Pseudo-classes allow you to style elements based on their state (e.g., :hover when the user hovers over an element), while pseudo-elements allow you to style parts of an element (e.g., ::before to add content before an element).",
+            "CSS combinators define the relationship between elements. For example, the descendant combinator ('div p') selects all <p> elements inside a <div>, and the child combinator ('div > p') selects only direct child <p> elements of a <div>."
+          ],
+          "example": {
+            "code": "p:hover { color: red; }"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Box Model Deep Dive",
+          "content": [
+            "The CSS box model explains how elements are rendered on a web page. It consists of the content area (where the text or images reside), padding (space inside the element), border (edges surrounding the element), and margin (space outside the element).",
+            "These four components affect the size and position of elements and their layout on the page. By mastering the box model, you can control element spacing, alignment, and overflow behavior. You can also avoid layout issues by using tools like the browser's developer tools to inspect and modify the box model."
+          ],
+          "example": {
+            "code": "div { margin: 20px; padding: 10px; border: 1px solid black; }"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Flexbox in Detail",
+          "content": [
+            "Flexbox is a powerful layout model that allows you to align and distribute space between items in a container. The main properties to control the flex layout include flex-direction (determines the axis of alignment, e.g., row or column), justify-content (aligns items horizontally, e.g., space-between, center), and align-items (aligns items vertically, e.g., center, stretch).",
+            "Flexbox makes it easier to create responsive and flexible layouts without needing to use float or positioning. Learn how to use Flexbox to build complex web layouts and improve the user interface."
+          ],
+          "example": {
+            "code": "div { display: flex; justify-content: center; align-items: center; }"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Responsive Design with Media Queries",
+          "content": [
+            "Responsive design ensures that a website works well on devices of various sizes, from mobile phones to desktop monitors. CSS media queries allow you to apply different styles based on the device's screen size, resolution, or orientation.",
+            "For example, you can adjust font size, layout, and positioning for smaller screens using a media query like @media (max-width: 768px). This ensures that your website is accessible and visually appealing on all devices, enhancing the user experience and accessibility."
+          ],
+          "example": {
+            "code": "@media (max-width: 768px) { body { font-size: 14px; } }"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "JavaScript Basics",
+      "description": "Learn JavaScript to add interactivity to your web pages.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to JavaScript",
+          "content": [
+            "JavaScript is a programming language that runs on the client-side within a web browser, enabling developers to create dynamic and interactive web pages. Unlike HTML and CSS, which are used to structure and style a page, JavaScript allows you to add logic and interactivity.",
+            "JavaScript is versatile and can be used for a variety of tasks, such as responding to user input (e.g., button clicks), validating forms, updating content dynamically, and manipulating the DOM (Document Object Model).",
+            "JavaScript can be embedded directly into an HTML document using the <script> tag or placed in external files that are linked to the HTML using the 'src' attribute of the <script> tag."
+          ],
+          "example": {
+            "code": "console.log('Hello, JavaScript');"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Data Types and Variables",
+          "content": [
+            "JavaScript supports a variety of data types, which are used to store different types of values. Primitive data types include strings (text), numbers, booleans (true/false), null, and undefined. Additionally, JavaScript has non-primitive types such as arrays and objects, which can store collections of data.",
+            "Variables are used to store values in JavaScript, and they can be declared using 'let', 'const', or 'var'. The 'let' and 'const' keywords are used to declare variables with block scope, while 'var' has function scope. The 'const' keyword is used for values that should not be reassigned.",
+            "Data types play a fundamental role in JavaScript, as they determine what operations can be performed on them. Understanding variables and their types is crucial for writing effective JavaScript code."
+          ],
+          "example": {
+            "code": "let name = 'Alice';\nconst age = 25;\nconsole.log(name, age);"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Functions and Loops",
+          "content": [
+            "Functions in JavaScript are blocks of reusable code that can be executed when called. Functions are defined using the 'function' keyword, and they can take parameters and return values.",
+            "Loops, such as 'for' and 'while', allow you to repeat code multiple times. For example, a 'for' loop can iterate over an array of elements and apply a function to each one. Functions and loops are fundamental to making your code more efficient and reusable."
+          ],
+          "example": {
+            "code": "function greet(name) {\n  console.log('Hello, ' + name);\n}\ngreet('Alice');"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Events and DOM Manipulation",
+          "content": [
+            "JavaScript enables you to interact with the Document Object Model (DOM), which represents the structure of an HTML document. Through DOM manipulation, you can change the content and structure of a webpage dynamically.",
+            "Events in JavaScript, such as clicks, hover, or keyboard input, allow you to trigger functions in response to user actions. By attaching event listeners to HTML elements, you can create interactive features on your website."
+          ],
+          "example": {
+            "code": "document.getElementById('button').addEventListener('click', function() {\n  alert('Button clicked!');\n});"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Asynchronous JavaScript",
+          "content": [
+            "Asynchronous JavaScript allows you to perform tasks like data fetching, without blocking other tasks on the page. The main mechanisms for handling asynchronous tasks are callbacks, promises, and async/await.",
+            "Using asynchronous techniques, you can make your websites faster and more responsive by running long-running operations in the background, such as fetching data from a server or performing complex calculations."
+          ],
+          "example": {
+            "code": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data));"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "React Basics",
+      "description": "Learn the fundamentals of React, a popular JavaScript library for building user interfaces.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to React",
+          "content": [
+            "React is a JavaScript library developed by Facebook for building user interfaces. It allows developers to create single-page applications where the content dynamically updates in response to user interactions.",
+            "React is based on components, which are reusable, self-contained pieces of the UI. These components can be as simple as a button or as complex as a form, and they can be nested to create more intricate UIs.",
+            "React uses a declarative approach to UI development, meaning developers define the desired state of the UI, and React automatically updates the DOM when the state changes."
+          ],
+          "example": {
+            "code": "import React from 'react';\n\nconst App = () => {\n  return <h1>Hello, React!</h1>;\n};\nexport default App;"
+          }
+        },
+        {
+          "id": 2,
+          "title": "JSX Syntax",
+          "content": [
+            "JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe the UI. It allows you to write HTML-like elements within JavaScript code.",
+            "Although it looks like HTML, JSX is eventually transformed into regular JavaScript function calls by tools like Babel. JSX allows you to define UI components in a more readable and expressive way.",
+            "One important thing to note is that JSX elements must be wrapped in a single parent element, and JavaScript expressions inside JSX must be enclosed in curly braces."
+          ],
+          "example": {
+            "code": "const element = <h1>Hello, JSX!</h1>;"
+          }
+        },
+        {
+          "id": 3,
+          "title": "State and Props",
+          "content": [
+            "In React, 'state' refers to data that can change over time and affect the rendering of components. State is usually stored within a component and can be updated using the setState function.",
+            "Props, on the other hand, are the data passed from a parent component to a child component. They are immutable and cannot be changed by the child component.",
+            "The interaction between state and props is what enables React's dynamic behavior, making it possible for the user interface to respond to user inputs and other changes in the application."
+          ],
+          "example": {
+            "code": "class Welcome extends React.Component {\n  render() {\n    return <h1>Hello, {this.props.name}</h1>;\n  }\n}\n\n<Welcome name=\"Alice\" />"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Handling Events in React",
+          "content": [
+            "React provides a way to handle user interactions through events. Event handlers in React are similar to traditional JavaScript, but with some differences. For example, React uses camelCase naming conventions for events (e.g., onClick instead of onclick).",
+            "You can attach event handlers to React components, such as buttons or form elements, to respond to user actions like clicks, form submissions, or keystrokes. These event handlers often update the component's state, which in turn triggers a re-render of the UI."
+          ],
+          "example": {
+            "code": "class MyButton extends React.Component {\n  handleClick = () => {\n    alert('Button clicked!');\n  }\n  render() {\n    return <button onClick={this.handleClick}>Click Me</button>;\n  }\n}"
+          }
+        },
+        {
+          "id": 5,
+          "title": "React Lifecycle Methods",
+          "content": [
+            "React components go through a series of lifecycle stages, including mounting, updating, and unmounting. Lifecycle methods allow you to run code at specific points in a component's life cycle.",
+            "For class-based components, lifecycle methods like componentDidMount, shouldComponentUpdate, and componentWillUnmount are available. These methods allow you to execute code after the component has been rendered, before it updates, and just before it is removed from the DOM.",
+            "With React hooks, the useEffect hook serves a similar purpose by allowing you to run side effects, such as data fetching or manual DOM manipulation, at different stages of the component's lifecycle."
+          ],
+          "example": {
+            "code": "useEffect(() => {\n  console.log('Component mounted');\n}, []);"
+          }
+        }
+      ]
+    }
+  ]
+}

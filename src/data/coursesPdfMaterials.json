@@ -1,0 +1,105 @@
+{
+    "courses": [
+      {
+        "courseHead": "Frontend Web Development",
+        "coursesDeatails": [
+          {
+            "coursesName": "HTML Basics",
+            "courseImg": "HTML.png",
+            "pdfPath": "https://drive.google.com/file/d/1fjr6jVrPi6reAf5SzFPHk4Zbck7mBR9J/preview"
+          },
+          {
+            "coursesName": "CSS Basics",
+            "courseImg": "CSS.png",
+            "pdfPath": "https://drive.google.com/file/d/1GcJo8wm-cvKVn2XaWfObricCJqvvBsPK/preview"
+          },
+          {
+            "coursesName": "JavaScript Basics",
+            "courseImg": "Javascript.png",
+            "pdfPath": "https://drive.google.com/file/d/1Lmc2L7XUrnhIe5mDoILuBwkbpc9PnAW9/preview"
+          },
+          {
+            "coursesName": "React Basics",
+            "courseImg": "React.png",
+            "pdfPath": "https://drive.google.com/file/d/1GeR3TyeXwdqv8ZFIcpKRi1wc7Tr109l0/preview"
+          }
+        ]
+      },
+      {
+        "courseHead": "Backend Web Development",
+        "coursesDeatails": [
+          {
+            "coursesName": "Node.js with Express.js",
+            "courseImg": "Node.png",
+            "pdfPath": "https://drive.google.com/file/d/1Gg29jxUfDRkjIBAxVTh5Es0LvzwoRpRu/preview"
+          },
+          {
+            "coursesName": "Python with Flask",
+            "courseImg": "Python.png",
+            "pdfPath": "https://drive.google.com/file/d/1GekyFLJW04PU5thEM3yDpcfFJrZhZLq9/preview"
+          },
+          {
+            "coursesName": "SQL with MySQL",
+            "courseImg": "MySQL.png",
+            "pdfPath": "https://drive.google.com/file/d/1D2E-qTmJlM05PG1nGztLNjzSc6rcXmIl/preview"
+          },
+          {
+            "coursesName": "MongoDB (NoSQL Database)",
+            "courseImg": "MongoDB.png",
+            "pdfPath": "https://drive.google.com/file/d/1CxgJBZESCGYygcs7JhLwD-7_16aNGZqd/preview"
+          }
+        ]
+      },
+      {
+        "courseHead": "App Development",
+        "coursesDeatails": [
+          {
+            "coursesName": "Android Development with Kotlin",
+            "courseImg": "Kotlin.png",
+            "pdfPath": "https://drive.google.com/file/d/1Cozv764W69rsUwv3ESaCep-P5gXoLuv0/preview"
+          },
+          {
+            "coursesName": "iOS Development with Swift",
+            "courseImg": "Swift.png",
+            "pdfPath": "https://drive.google.com/file/d/1D5XUDcljkHx54LdnOMo-KTfuqJd-Jw1U/preview"
+          },
+          {
+            "coursesName": "React Native",
+            "courseImg": "ReactNative.png",
+            "pdfPath": "https://drive.google.com/file/d/1D4bOPWUJN4uF90_DQOlYGAEXa2zhJFVK/preview"
+          },
+          {
+            "coursesName": "Flutter with Dart",
+            "courseImg": "Flutter.png",
+            "pdfPath": "https://drive.google.com/file/d/1GnmAO5ScV4km9xtIj-1XBzf4qwuh8bAa/preview"
+          }
+        ]
+      },
+      {
+        "courseHead": "Cloud Computing",
+        "coursesDeatails": [
+          {
+            "coursesName": "Cloud Fundamentals",
+            "courseImg": "CloudFunda.png",
+            "pdfPath": "https://drive.google.com/file/d/1CjhJfOfHPi896bGDWHZDIZgMbx9Wq6DI/preview"
+          },
+          {
+            "coursesName": "Amazon Web Services (AWS)",
+            "courseImg": "AWS.png",
+            "pdfPath": "https://drive.google.com/file/d/1CUOk1_NyazQ6z_OV2zIJC43iltZrJnNy/preview"
+          },
+          {
+            "coursesName": "Docker and Kubernetes",
+            "courseImg": "Doker&Kubernetes.png",
+            "pdfPath": "https://drive.google.com/file/d/1D97X5Wb6KjuBXaJMnh1j1_87it7DDKN7/preview"
+          },
+          {
+            "coursesName": "Cloud Security",
+            "courseImg": "CloudSec.png",
+            "pdfPath": "https://drive.google.com/file/d/1CjhJfOfHPi896bGDWHZDIZgMbx9Wq6DI/preview"
+          }
+        ]
+      }
+    ]
+  }
+  

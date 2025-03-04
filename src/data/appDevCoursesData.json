@@ -1,0 +1,320 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Android Development with Kotlin",
+      "description": "Learn to build Android applications using Kotlin.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to Kotlin",
+          "content": [
+            "Kotlin is a modern programming language that runs on Chrome's V8 engine, designed to be fully interoperable with Java.",
+            "It offers concise syntax and powerful features like null safety, making app development more efficient and less error-prone.",
+            "Google officially supports Kotlin for Android development, enhancing its popularity among developers."
+          ],
+          "example": {
+            "code": "fun main() {\n  println('Hello, Kotlin!')\n}"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Setting Up Android Studio",
+          "content": [
+            "To start building Android apps, you need to set up Android Studio, which is the official Integrated Development Environment (IDE) for Android.",
+            "Ensure that you have the correct Android SDK and Kotlin plugin installed before creating your first project.",
+            "Familiarize yourself with the layout of Android Studio, including the project structure, code editor, and tool windows."
+          ],
+          "example": {
+            "code": "Install Android Studio from the official site and follow the setup instructions."
+          }
+        },
+        {
+          "id": 3,
+          "title": "Building Your First Android App",
+          "content": [
+            "In this chapter, you will learn how to create a simple 'Hello World' Android app using Kotlin.",
+            "You'll create a basic user interface with a TextView that displays text and a Button that changes the text when clicked.",
+            "Understand the structure of an Android app, including the Manifest file and the resource directories."
+          ],
+          "example": {
+            "code": "val button = findViewById<Button>(R.id.button)\nbutton.setOnClickListener {\n  findViewById<TextView>(R.id.textView).text = 'Hello, Android!'\n}"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Working with Intents",
+          "content": [
+            "Intents are used to perform operations between different Android components like Activities and Services.",
+            "In this chapter, you will learn how to use explicit intents (for starting a specific Activity) and implicit intents (for actions like sharing or viewing content) to navigate between screens.",
+            "Explore how to pass data between Activities using intent extras."
+          ],
+          "example": {
+            "code": "val intent = Intent(this, SecondActivity::class.java)\nstartActivity(intent)"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Storing Data in Android",
+          "content": [
+            "Android provides various options for data storage, including SharedPreferences for simple key-value pairs, SQLite for structured data, and Room for an ORM approach.",
+            "In this chapter, you'll learn how to store simple data using SharedPreferences and how to retrieve and display that data in your app.",
+            "Understand when to use each storage option based on your app's needs."
+          ],
+          "example": {
+            "code": "val sharedPreferences = getSharedPreferences('app_preferences', MODE_PRIVATE)\nval editor = sharedPreferences.edit()\neditor.putString('username', 'user123')\neditor.apply()"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Networking in Android",
+          "content": [
+            "In modern apps, communicating with remote servers is essential. You'll learn how to make HTTP requests using Retrofit, a powerful networking library for Android.",
+            "This chapter covers sending and receiving data over the internet, handling responses, and parsing JSON data into Kotlin objects.",
+            "Explore best practices for networking, including error handling and managing network calls on background threads."
+          ],
+          "example": {
+            "code": "interface ApiService {\n  @GET('users')\n  suspend fun getUsers(): List<User>\n}\nval retrofit = Retrofit.Builder().baseUrl('https://api.example.com').build()"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "iOS Development with Swift",
+      "description": "Learn to build iOS applications using Swift and Xcode.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to Swift",
+          "content": [
+            "Swift is a powerful programming language used for iOS, macOS, watchOS, and tvOS development.",
+            "In this chapter, you'll learn basic Swift syntax and how to set up an iOS project in Xcode.",
+            "Swift emphasizes safety and performance, making it easier to write reliable code."
+          ],
+          "example": {
+            "code": "import UIKit\n\nvar greeting = 'Hello, Swift!'\nprint(greeting)"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Setting Up Xcode",
+          "content": [
+            "Xcode is the official IDE for iOS development. You'll need to install Xcode and set up an iOS project to get started.",
+            "This chapter will guide you through the Xcode setup process, including creating a new project and understanding the interface.",
+            "Familiarize yourself with the project navigator and Interface Builder."
+          ],
+          "example": {
+            "code": "Install Xcode from the Mac App Store and create a new 'Single View App' project."
+          }
+        },
+        {
+          "id": 3,
+          "title": "Building Your First iOS App",
+          "content": [
+            "In this chapter, you'll learn how to create a simple iOS app that displays a label and a button.",
+            "When the button is pressed, the label will change its text. You'll understand how to connect UI elements to your code.",
+            "Explore the Model-View-Controller (MVC) design pattern commonly used in iOS development."
+          ],
+          "example": {
+            "code": "import UIKit\n\nclass ViewController: UIViewController {\n  @IBOutlet weak var label: UILabel!\n  @IBAction func changeText(_ sender: UIButton) {\n    label.text = 'Hello, iOS!'\n  }\n}"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Handling User Input in iOS",
+          "content": [
+            "This chapter covers how to handle user input using UITextField and how to validate the data entered by the user.",
+            "Learn to respond to user interactions and provide feedback based on input.",
+            "Explore best practices for user input validation to enhance app reliability."
+          ],
+          "example": {
+            "code": "let userInput = textField.text\nif userInput == '' {\n  print('Please enter some text')\n}"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Storing Data in iOS",
+          "content": [
+            "In iOS, you can store data using UserDefaults for simple data, or CoreData for more complex data storage needs.",
+            "This chapter focuses on using UserDefaults to save user preferences and retrieve them later.",
+            "Understand the differences between UserDefaults and CoreData to choose the right option for your app."
+          ],
+          "example": {
+            "code": "UserDefaults.standard.set('user123', forKey: 'username')"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Networking in iOS",
+          "content": [
+            "Making HTTP requests and receiving JSON data is common in iOS development. You'll learn how to use URLSession for networking in this chapter.",
+            "Understand how to handle network responses and parse JSON data into Swift objects.",
+            "Explore error handling techniques to manage network issues gracefully."
+          ],
+          "example": {
+            "code": "let url = URL(string: 'https://api.example.com/users')!\nlet task = URLSession.shared.dataTask(with: url) { data, response, error in\n  if let data = data {\n    print(String(data: data, encoding: .utf8)!)\n  }\n}\ntask.resume()"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "React Native",
+      "description": "Learn to build cross-platform mobile apps with React Native.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to React Native",
+          "content": [
+            "React Native is a JavaScript framework used to build mobile applications using React.",
+            "In this chapter, you will learn how to set up a React Native environment and create your first app.",
+            "Understand the advantages of using React Native for cross-platform development."
+          ],
+          "example": {
+            "code": "npx react-native init MyFirstApp\ncd MyFirstApp\nnpx react-native run-android"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Building UI Components",
+          "content": [
+            "React Native uses components to build UIs. This chapter will teach you how to create and style basic UI elements like Text, View, and Button.",
+            "Learn about component properties and state management to create dynamic interfaces.",
+            "Explore how to use stylesheets to apply consistent styling across your app."
+          ],
+          "example": {
+            "code": "import React from 'react';\nimport { Text, View, Button } from 'react-native';\n\nexport default function App() {\n  return (\n    <View>\n      <Text>Hello, React Native!</Text>\n      <Button title='Press me' onPress={() => alert('Button pressed!')} />\n    </View>\n  );\n}"
+          }
+        },
+        {
+          "id": 3,
+          "title": "State Management in React Native",
+          "content": [
+            "State management is a core concept in React Native. You'll learn how to manage state using useState and pass state between components.",
+            "Understand the importance of lifting state up for better component communication.",
+            "Explore how to manage complex state with context or libraries like Redux."
+          ],
+          "example": {
+            "code": "import React, { useState } from 'react';\nimport { Button, Text, View } from 'react-native';\n\nexport default function App() {\n  const [count, setCount] = useState(0);\n  return (\n    <View>\n      <Text>You clicked {count} times</Text>\n      <Button title='Click me' onPress={() => setCount(count + 1)} />\n    </View>\n  );\n}"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Navigation in React Native",
+          "content": [
+            "Navigation is a crucial part of any mobile application. You'll learn how to use React Navigation for navigating between screens.",
+            "Understand different navigation patterns such as stack, tab, and drawer navigation.",
+            "Explore how to pass parameters between screens and manage navigation state."
+          ],
+          "example": {
+            "code": "import { NavigationContainer } from '@react-navigation/native';\nimport { createStackNavigator } from '@react-navigation/stack';\n\nfunction HomeScreen({ navigation }) {\n  return (\n    <View>\n      <Button title='Go to Details' onPress={() => navigation.navigate('Details')} />\n    </View>\n  );\n}\n\nconst Stack = createStackNavigator();\n\nexport default function App() {\n  return (\n    <NavigationContainer>\n      <Stack.Navigator>\n        <Stack.Screen name='Home' component={HomeScreen} />\n        <Stack.Screen name='Details' component={DetailsScreen} />\n      </Stack.Navigator>\n    </NavigationContainer>\n  );\n}"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Handling User Input in React Native",
+          "content": [
+            "Handling user input with TextInput components and using form validation techniques in React Native.",
+            "Learn how to manage input state and provide instant feedback to users.",
+            "Explore libraries like Formik for more complex form handling scenarios."
+          ],
+          "example": {
+            "code": "import { TextInput, Button } from 'react-native';\n\nfunction App() {\n  const [text, setText] = useState('');\n  return (\n    <TextInput\n      value={text}\n      onChangeText={setText}\n      placeholder='Enter text'\n    />\n  );\n}"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Making HTTP Requests in React Native",
+          "content": [
+            "In this chapter, you'll learn how to fetch data from a remote API using fetch or Axios and display it in your app.",
+            "Understand how to manage asynchronous data fetching with hooks.",
+            "Explore error handling and loading states to improve user experience."
+          ],
+          "example": {
+            "code": "import { useState, useEffect } from 'react';\nimport { View, Text } from 'react-native';\n\nfunction App() {\n  const [data, setData] = useState(null);\n\n  useEffect(() => {\n    fetch('https://api.example.com/data')\n      .then(response => response.json())\n      .then(json => setData(json));\n  }, []);\n\n  return (\n    <View>\n      <Text>{data ? data.message : 'Loading...'}</Text>\n    </View>\n  );\n}"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Flutter with Dart",
+      "description": "Learn to build mobile apps with Flutter and Dart.",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introduction to Flutter",
+          "content": [
+            "Flutter is an open-source UI framework by Google that uses Dart as its programming language.",
+            "In this chapter, you will set up Flutter and create a simple 'Hello World' app.",
+            "Understand the advantages of using Flutter for building cross-platform applications."
+          ],
+          "example": {
+            "code": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('Flutter Demo'),\n        ),\n        body: Center(\n          child: Text('Hello, Flutter!'),\n        ),\n      ),\n    );\n  }\n}"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Building Layouts in Flutter",
+          "content": [
+            "Flutter provides various layout widgets such as Container, Row, Column, and Stack to arrange UI components.",
+            "In this chapter, you'll learn how to build basic layouts and understand the widget tree structure.",
+            "Explore how to use padding, margins, and alignment to create visually appealing layouts."
+          ],
+          "example": {
+            "code": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('Flutter Layout Demo'),\n        ),\n        body: Column(\n          mainAxisAlignment: MainAxisAlignment.center,\n          children: <Widget>[\n            Text('Hello Flutter!'),\n            ElevatedButton(onPressed: () {}, child: Text('Press Me')),\n          ],\n        ),\n      ),\n    );\n  }\n}"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Handling User Input in Flutter",
+          "content": [
+            "Flutter provides TextField for handling user input. You'll learn how to collect input data and handle validation.",
+            "Understand how to implement form validation and provide real-time feedback to users.",
+            "Explore the use of controllers to manage TextField state effectively."
+          ],
+          "example": {
+            "code": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n  final TextEditingController _controller = TextEditingController();\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('Input Example'),\n        ),\n        body: Padding(\n          padding: const EdgeInsets.all(16.0),\n          child: Column(\n            children: <Widget>[\n              TextField(\n                controller: _controller,\n                decoration: InputDecoration(labelText: 'Enter text'),\n              ),\n              ElevatedButton(\n                onPressed: () {\n                  print(_controller.text);\n                },\n                child: Text('Submit'),\n              ),\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n}"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Navigation in Flutter",
+          "content": [
+            "In Flutter, navigation between screens is done through the Navigator widget.",
+            "You'll learn how to push and pop routes in Flutter to navigate between pages.",
+            "Explore how to pass data between screens during navigation."
+          ],
+          "example": {
+            "code": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: HomePage(),\n    );\n  }\n}\n\nclass HomePage extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: Text('Home')), \n      body: Center(\n        child: ElevatedButton(\n          onPressed: () {\n            Navigator.push(\n              context,\n              MaterialPageRoute(builder: (context) => SecondPage()),\n            );\n          },\n          child: Text('Go to Second Page'),\n        ),\n      ),\n    );\n  }\n}\n\nclass SecondPage extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: Text('Second Page')), \n      body: Center(\n        child: ElevatedButton(\n          onPressed: () {\n            Navigator.pop(context);\n          },\n}"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Networking in Flutter",
+          "content": [
+            "In this chapter, you'll learn how to make HTTP requests in Flutter using the http package.",
+            "Understand how to handle responses, parse JSON data, and display it in your app.",
+            "Explore error handling techniques to manage network failures gracefully and improve user experience."
+          ],
+          "example": {
+            "code": "import 'package:flutter/material.dart';\nimport 'package:http/http.dart' as http;\nimport 'dart:convert';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n @override\n Widget build(BuildContext context) {\n return MaterialApp(\n home: Scaffold(\n appBar: AppBar(title: Text('Networking in Flutter')), \n body: Center(\n child: FutureBuilder(\n future: fetchData(),\n builder: (context, snapshot) {\n if (snapshot.connectionState == ConnectionState.waiting) {\n return CircularProgressIndicator();\n }\n if (snapshot.hasData) {\n return Text('Data: ${snapshot.data}');\n }\n return Text('Error');\n },\n ),\n ),\n ),\n );\n }\n\n Future<String> fetchData() async {\n final response = await http.get(Uri.parse('https://api.example.com/data'));\n if (response.statusCode == 200) {\n return json.decode(response.body)['message'];\n } else {\n throw Exception('Failed to load data');\n }\n }\n}"
+          }
+        },
+        {
+          "id": 6,
+          "title": "State Management in Flutter",
+          "content": [
+            "State management is crucial for building responsive applications in Flutter.",
+            "In this chapter, you will learn about various state management approaches, including Provider and Riverpod.",
+            "Understand how to manage local state within widgets and global state across your app."
+          ],
+          "example": {
+            "code": "import 'package:flutter/material.dart';\nimport 'package:provider/provider.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n @override\n Widget build(BuildContext context) {\n return ChangeNotifierProvider(\n create: (context) => Counter(),\n child: MaterialApp(\n home: HomePage(),\n ),\n );\n }\n}\n\nclass Counter with ChangeNotifier {\n int _count = 0;\n int get count => _count;\n\n void increment() {\n _count++;\n notifyListeners();\n }\n}\n\nclass HomePage extends StatelessWidget {\n @override\n Widget build(BuildContext context) {\n return Scaffold(\n appBar: AppBar(title: Text('State Management')), \n body: Center(\n child: Column(\n mainAxisAlignment: MainAxisAlignment.center,\n children: <Widget>[\n Consumer<Counter>(\n builder: (context, counter, child) => Text('Count: ${counter.count}'),\n ),\n ElevatedButton(\n onPressed: () => context.read<Counter>().increment(),\n child: Text('Increment'),\n ),\n ],\n ),\n ),\n );\n }\n}"
+          }
+        }
+      ]
+    }
+  ]
+}
