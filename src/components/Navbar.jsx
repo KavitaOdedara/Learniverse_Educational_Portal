@@ -29,12 +29,12 @@ function Navbar() {
                     {(!loggedInUser) ? (
                         <div className="hidden md:flex space-x-2">
                             <button className="relative inline-flex items-center justify-center p-0.5 text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-whirounded-md group-hover:bg-opacity-0">
                                     <Link to="/login">Login</Link>
                                 </span>
                             </button>
                             <button className="relative inline-flex items-center justify-center p-0.5 text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-whirounded-md group-hover:bg-opacity-0">
                                     <Link to="/signup">Sign Up</Link>
                                 </span>
                             </button>
@@ -72,7 +72,7 @@ function Navbar() {
                     className={`${isMenuOpen ? "block" : "hidden"
                         } items-center justify-between w-full md:flex md:w-auto md:order-1`}
                 >
-                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-gray-700">
                         <li>
                             <Link
                                 to="/"
@@ -91,7 +91,7 @@ function Navbar() {
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                                     </svg></button>
                                 {isCoursesDropdownOpen && (
-                                    <div className="absolute right-0 z-50 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-700">
+                                    <div className="absolute right-0 z-50 mt-2 w-48 bg-white rounded-lg shadow-lg ">
                                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                                             <li>
                                                 <Link
@@ -160,12 +160,12 @@ function Navbar() {
                         {!loggedInUser && (
                             <li className="flex flex-col space-y-2 md:hidden">
                                 <button className="relative inline-flex items-center justify-center p-0.5 text-xlg font-medium text-gray-900 rounded-lg border-2 border-cyan-600 hover:bg-cyan-600  focus:outline-none hover:text-white" >
-                                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                    <span className="relative px-5 py-2.5 transition-all ease-in duration-rounded-md group-hover:bg-opacity-0">
                                         <Link to="/login">Login</Link>
                                     </span>
                                 </button>
                                 <button className="relative inline-flex items-center justify-center p-0.5 text-xlg font-medium text-gray-900 rounded-lg border-2 border-cyan-600 hover:bg-cyan-600  focus:outline-none hover:text-white">
-                                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                    <span className="relative px-5 py-2.5 transition-all ease-in duration-rounded-md group-hover:bg-opacity-0">
                                         <Link to="/signup">Sign Up</Link>
                                     </span>
                                 </button>
