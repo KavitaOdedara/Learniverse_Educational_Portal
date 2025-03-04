@@ -1,5 +1,3 @@
-
-
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiAccountCircleFill } from "react-icons/ri";
@@ -31,12 +29,12 @@ function Profile() {
                     <RiAccountCircleFill className="w-10 h-10 rounded-full text-cyan-600 mt-2" />
                 </button>
                 {isProfileDropdownOpen && (
-                    <div className="absolute right-0 z-50 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-700">
+                    <div className="absolute right-0 z-50 mt-2 w-48 bg-white rounded-lg shadow-lg">
                         <div className="px-4 py-3">
-                            <span className="block text-sm text-gray-900 dark:text-white">
+                            <span className="block text-sm text-gray-900">
                                 Hi,
                             </span>
-                            <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
+                            <span className="block text-sm text-gray-500 truncate">
                                 {loggedInUser}
                             </span>
                         </div>
@@ -44,7 +42,7 @@ function Profile() {
                             <li>
                                 <Link
                                     to="/my-learning"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                 >
                                     My Learning
                                 </Link>
@@ -52,7 +50,7 @@ function Profile() {
                             <li>
                                 <button
                                     onClick={handleLogout}
-                                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600"
+                                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                 >
                                     Log out
                                 </button>
