@@ -11,12 +11,15 @@ const app = express();
 const GOOGLE_SHEET_URL = process.env.VITE_GOOGLE_SHEET;
 const GOOGLE_SCRIPT_URL = process.env.VITE_GOOGLE_SHEET_SCRIPT;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://learniverse-educational-portal.vercel.app/', // Change to your frontend URL
+}));
 app.use(express.json());
 
 // The proxy endpoint
 app.post('/api/proxy', async (req, res) => {
     const { endpoint, username, email, password } = req.body;
+    console.log('Received request:', req.body); // Log the request for debugging
 
     try {
         let result;
@@ -26,9 +29,13 @@ app.post('/api/proxy', async (req, res) => {
             result = await axios.get(GOOGLE_SHEET_URL);
         }
 
-        res.json(result.data);
+        if (result) {
+            res.json(result.data);
+        } else {
+            res.status(500).json({ error: 'No data returned from API.' });
+        }
     } catch (error) {
-        console.error('Error in proxy:', error);
+        console.error('Error in proxy:', error.response ? error.response.data : error.message);
         res.status(500).json({ error: 'Something went wrong.' });
     }
 });
