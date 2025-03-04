@@ -125,7 +125,7 @@ function Login() {
                         </div>
 
                         {error && <div className="text-red-500">{error}</div>}
-                        {success && <div className="text-green-500">{success}</div>}
+                        {success && <div className="text-cyan-600 text-center">{success}</div>}
                     </form>
 
                     <p className="mt-10 text-center text-sm text-gray-500">
