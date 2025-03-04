@@ -91,7 +91,7 @@ function Navbar() {
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                                     </svg></button>
                                 {isCoursesDropdownOpen && (
-                                    <div className="absolute right-0 z-50 mt-2 w-48 bg-white rounded-lg shadow-lg ">
+                                    <div className="absolute right-0 z-50 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-700">
                                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                                             <li>
                                                 <Link

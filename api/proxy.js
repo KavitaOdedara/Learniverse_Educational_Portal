@@ -12,7 +12,7 @@ const GOOGLE_SHEET_URL = process.env.VITE_GOOGLE_SHEET;
 const GOOGLE_SCRIPT_URL = process.env.VITE_GOOGLE_SHEET_SCRIPT;
 
 app.use(cors({
-  origin: 'https://learniverse-educational-portal.vercel.app/', // Change to your frontend URL
+  origin: '*', // Change to your frontend URL
 }));
 app.use(express.json());
 
