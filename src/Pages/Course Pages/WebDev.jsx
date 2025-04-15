@@ -52,7 +52,7 @@ const WebDev = () => {
          {/* Frontend Development */}
          <div className="mx-auto p-6">
            <div className="text-center text-2xl capitalize py-6 font-medium tracking-wider dark:text-white">
-             <span className='border-b-2 border-cyan-600'>Frontend Development</span>
+             <span className='border-b-2 border-cyan-600 text-black'>Frontend Development</span>
            </div>
           <div className="w-fit gap-6 mx-auto grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 p-10">
              {frontendCourses.map(course => (
@@ -86,7 +86,7 @@ const WebDev = () => {
         {/* Backend Development */}
         <div className="mx-auto p-6">
           <div className="text-center text-2xl capitalize py-6 font-medium tracking-wider dark:text-white">
-            <span className='border-b-2 border-cyan-600'>Backend Development</span>
+            <span className='border-b-2 border-cyan-600 text-black'>Backend Development</span>
           </div>
           <div className="w-fit gap-6 mx-auto grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 p-10">
             {backendCourses.map(course => (
